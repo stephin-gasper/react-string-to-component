@@ -1,13 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import shortid from "shortid";
-import './App.css';
+import Axios from "axios";
 
 class App extends Component {
+  state = {
+    loadedComponents: [],
+    components: []
+  };
+  componentDidMount = () => {
+    Axios.get("http://5be5853348c1280013fc3d63.mockapi.io/cc/components")
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
   render() {
-    return (
-      <div className="App">
-      </div>
-    );
+    return <div className="App" />;
   }
 }
 
