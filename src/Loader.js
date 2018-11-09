@@ -12,11 +12,17 @@ const rotate = keyframes`
 `;
 
 const LoaderWrap = styled.div`
+  align-items: center;
+  background-color: #eeeeee91;
   color: #212529;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
   & svg {
     animation: ${rotate} 2s linear infinite;
     display: inline-block;
-    height: 40vmin;
+    height: 25vmax;
   }
 `;
 
