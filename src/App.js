@@ -7,6 +7,13 @@ class App extends Component {
   state = {
     components: []
   };
+  /**
+   * Used for importing components dyanamically by string provided.
+   * 
+   * @param {string} componentStr - Component filename
+   * @returns {object} React Component
+   * @memberof App
+   */
   getComponent = async componentStr => {
     console.log(`Loading ${componentStr} component...`);
     try {
